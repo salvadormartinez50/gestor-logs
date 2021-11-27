@@ -1,0 +1,30 @@
+{
+  "compile_source" : true,
+  "deployment" : true,
+  "service" : true,
+  "route" : true,
+  "external_route" : false,
+  "namespace" : "sb-amis-capps",
+  "application_group_name" : "amis-edua",
+  "deployment_name" : "gestor-logs",
+  "routename" : "sb-amis-edua-logs",
+  "app_context" : "",
+  "source_git_repo" : "https://sbt-ol7appdv08.segurosbanorte.com/gitlab/bapis/getpocs/gestor-logs.git",
+  "source_git_revision" : "HEAD",
+  "mvn_path_context" : ".",
+  "binary_name" : "gestor-logs-1.0.0-SNAPSHOT-runner.jar",
+  "debug_mode" : false,
+  "livenessprobe" : "/q/health/live",
+  "livenessprobe_port" : 8080,
+  "readinessprobe" : "",
+  "readinessprobe_port" : 8080,
+  "environment" : "DEV",
+  "environment_vars" : {
+    "EDUA_DB_INTEGRACION_USER" : "INTFMW_DEV",
+    "EDUA_DB_INTEGRACION_PASS" : "HYgte$isj7",
+    "EDUA_DRIVER_DB_INTEGRACION" : "jdbc:oracle:thin:@",
+    "EDUA_HOST_DB_INTEGRACION" : "15.192.41.156",
+    "EDUA_DB_INTEGRACION_PORT" : "1521",
+    "EDUA_DB_INTEGRACION_NAME" : "ESPAD360"
+  }
+}
