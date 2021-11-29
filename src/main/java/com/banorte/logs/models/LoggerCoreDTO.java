@@ -52,4 +52,6 @@ public class LoggerCoreDTO {
     public String request;
     @JsonProperty("response")
     public String response;
+    @JsonProperty("subProcess")
+    public String subProcess;
 }

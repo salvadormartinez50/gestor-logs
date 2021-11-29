@@ -7,6 +7,7 @@ import com.banorte.logs.services.LogService;
 import com.banorte.logs.validators.EmptyInfo;
 import com.banorte.logs.validators.ProcessIdInfo;
 import org.apache.http.HttpStatus;
+import org.jboss.logging.Logger;
 
 import javax.inject.Inject;
 import javax.validation.ConstraintViolation;
@@ -28,6 +29,8 @@ public class GetLogController {
 
     @Inject
     Validator validator;
+    @Inject
+    Logger log;
 
     @POST
     @Path("/getLogLevel")
@@ -41,6 +44,7 @@ public class GetLogController {
             return generarRespuestaError(violations, CodigoError.NTF_CIERRE_ORIGEN);
         }
         return Response.ok(logService.getLog(getLogRequestDTO)).build();
+      
     }
 
     private Response generarRespuestaError(Set<ConstraintViolation<GetLogRequestDTO>> violations, CodigoError codigoError) {
